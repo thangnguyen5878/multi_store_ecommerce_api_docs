@@ -1,15 +1,43 @@
 ---
-title: Welcome to Zudoku
+title: Multi Store E-Commerce API
+description: Documentation for the Multi Store E-Commerce RESTful API
 ---
 
-Thanks for choosing to use Zudoku to power your API documentation!
+Welcome to the official documentation for the Multi Store E-Commerce API. This RESTful API powers our multi-vendor e-commerce platform, allowing developers to integrate with our system for various operations including user management, product listings, order processing, and more.
 
-## Edit this page
+## API Overview
 
-To edit this page, open the `index.mdx` file in the `pages` directory.
+The Multi Store E-Commerce API is organized around REST principles. Our API has predictable resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
-## Additional Configuration
+## Authentication
 
-You can find the full configuration for your Zudoku site in the `zudoku.config.ts` file.
+The API uses JSON Web Tokens (JWT) for authentication. To access protected endpoints, you need to include the token in the token header of your requests.
 
-For further information on how to customize your site, check out the [Zudoku documentation](https://zudoku.dev/docs).
+## Error Handling
+
+The API uses conventional HTTP response codes to indicate the success or failure of an API request:
+
+- `2xx` - Success
+- `4xx` - Error that failed given the information provided (e.g., bad request, not found)
+- `5xx` - Server errors
+
+Error responses include a JSON object with an `error` field that provides additional information about the error.
+
+Example error response:
+```json
+{
+  "error": "Invalid input parameters",
+  "msg": "Product name is required"
+}
+```
+
+## Getting Started
+
+To start using the API, you need to:
+
+1. Register a user account using the `/api/signup` endpoint
+2. Authenticate using the `/api/signin` endpoint to obtain a JWT token
+3. Include this token in subsequent requests that require authentication
+
+Detailed information about each endpoint, including request parameters, response formats, and examples, can be found in the API Reference section of this documentation.
+

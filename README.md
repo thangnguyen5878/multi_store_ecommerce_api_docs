@@ -1,10 +1,30 @@
-## Zudoku App
+# Multi Store E-Commerce API Documentation
 
-This is a Zuplo app that was created with [`create-zudoku-app`](https://zudoku.dev/docs).
+This is the API documentation for the Multi Store E-Commerce platform built with [Zudoku](https://zudoku.dev/docs).
+
+## Overview
+
+This documentation provides detailed information about all the API endpoints available in the Multi Store E-Commerce backend, including:
+
+- Authentication APIs
+- Product management
+- Category and subcategory operations
+- Order processing
+- Banner management
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,12 +34,35 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the documentation.
 
-You can start editing the page by modifying `pages/docs/intro.mdx`. You will see the content automatically update as you save the file.
+## API Specification
 
-## Learn More
+The API is documented using the OpenAPI 3.0 specification, which can be found in:
 
-To learn more about Zudoku, you can visit the [Zudoku documentation](https://zudoku.dev/docs).
+```
+/apis/openapi.yaml
+```
 
-To connect with the community join the [GitHub Discussions](https://github.com/zuplo/zudoku/discussions) or [Discord](https://discord.zudoku.dev).
+This specification includes:
+
+- Detailed endpoint descriptions
+- Request/response schemas
+- Example requests and responses
+- Authentication requirements
+- Error handling information
+
+## Building for Production
+
+To build the documentation site for production:
+
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+The production build will be available in the `dist` directory.
+
